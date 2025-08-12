@@ -251,6 +251,9 @@ transition: slide-left
 | Transitive dependencies              | All removed                 |
 
 
+- see 1 to 1, 1 to many, and many to many relationships
+- https://www.wqiu1.com/online-courses/app-development-2/app-development-unit-1-lesson-3-introduction-to-relational-database-concept/
+
 ---
 transition: slide-left
 ---
