@@ -86,6 +86,28 @@ CREATE TABLE Students (
 1. Create a table called Employees with columns: EmployeeID, Name, Position, Salary, HireDate.
 2. Create a table called Departments with columns: DepartmentID, DeptName, and Location.
 
+
+---
+transition: slide-left
+---
+
+# Inserting Data
+
+```sql
+INSERT INTO Students (FirstName, LastName, Age, EnrollmentDate)
+VALUES ('John', 'Doe', 18, '2025-08-01');
+```
+
+## Exercises
+1. Insert 3 employees into the Employees table.
+2. Insert 2 departments into the Departments table.
+
+---
+transition: slide-left
+---
+
+# Reading DATA
+
 ---
 layout: image-right
 transition: slide-left
@@ -108,11 +130,12 @@ class: text-left
 - 🧪 [Enter anonymous lab questions](https://docs.google.com/forms/d/e/1FAIpQLSevvGARdHQikso-uLqFCO481MABKE5HofuSrlzEPMNQ2ZLykw/viewform?usp=dialog)
 - ℹ️ [Course feedback survey](https://circuitstream.typeform.com/to/ZoyYk7px#course_id=SoftwareAN&instructor=9514)
 
+
 ---
 transition: slide-left
 ---
 
 # Homework
 
-- Work on your "Algorithm and Structural Foundations" assignment due July 20 midnight EST
+- Work on your "Weather App" assignment due Aug 17 midnight EST
    - can submit before due date if you wish
