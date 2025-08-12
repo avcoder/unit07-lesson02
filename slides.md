@@ -72,6 +72,8 @@ transition: slide-left
 
 # Creating Tables
 
+- see data types https://dev.mysql.com/doc/refman/8.4/en/data-types.html
+
 ```sql
 CREATE TABLE Students (
     StudentID INT AUTO_INCREMENT PRIMARY KEY,
@@ -85,6 +87,7 @@ CREATE TABLE Students (
 ## Exercises
 1. Create a table called Employees with columns: EmployeeID, Name, Position, Salary, HireDate.
 2. Create a table called Departments with columns: DepartmentID, DeptName, and Location.
+3. Create a table of your choice with columns of your choice
 
 
 ---
@@ -101,12 +104,63 @@ VALUES ('John', 'Doe', 18, '2025-08-01');
 ## Exercises
 1. Insert 3 employees into the Employees table.
 2. Insert 2 departments into the Departments table.
+3. Insert data into your custom table
 
 ---
 transition: slide-left
 ---
 
-# Reading DATA
+# Reading Data
+
+```sql
+-- Select all columns
+SELECT * FROM Students;
+
+-- Select specific columns
+SELECT FirstName, Age FROM Students;
+
+-- Add WHERE clause
+SELECT * FROM Students WHERE Age > 18;
+```
+
+## Exercises
+1. Select all employees who earn more than 50000.
+2. Display only the department names from the Departments table.
+3. Display data from your custom table
+
+---
+transition: slide-left
+---
+
+# Updating Data
+
+```sql
+-- Update student age
+UPDATE Students
+SET Age = 19
+WHERE StudentID = 1;
+```
+
+## Exercises
+1. Change the salary of an employee with a specific ID.
+2. Update the location of a department.
+3. Update data from your custom table
+
+---
+transition: slide-left
+---
+
+# Deleting data
+
+```sql
+-- Delete a student
+DELETE FROM Students WHERE StudentID = 1;
+```
+
+## Exercises
+1. Delete an employee based on their name.
+2. Remove a department with a specific ID.
+3. Delete data from your custom table
 
 ---
 layout: image-right
