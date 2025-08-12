@@ -232,8 +232,7 @@ transition: slide-left
   - This is a transitive dependency. The CustomerAddress depends on CustomerName, not directly on OrderID.
 - ProductName → ProductPrice
   - Another transitive dependency. The price is a property of the product, not the order.
-- Redundancy:
-  - Alice Smith and her address are repeated in two rows.
+- Redundancy: Alice Smith and her address are repeated in two rows.
   - If the address changes, you have to update it in multiple places (update anomaly).
   - Similarly, if ProductPrice changes, you’d have to find and update every instance.
 
