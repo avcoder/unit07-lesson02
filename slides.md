@@ -215,7 +215,28 @@ transition: slide-left
   - Ensure data dependencies make sense
   - Improve data integrity
 - Normalization is done in stages called normal forms.
-- ChatGPT: show an example of 3rd normal form
+
+---
+transition: slide-left
+---
+
+# Example Issues
+
+| OrderID | CustomerName | CustomerAddress | ProductName | ProductPrice |
+| ------- | ------------ | --------------- | ----------- | ------------ |
+| 1001    | Alice Smith  | 123 Main St     | Pen         | 1.50         |
+| 1002    | Bob Jones    | 456 Oak Ave     | Notebook    | 2.75         |
+| 1003    | Alice Smith  | 123 Main St     | Pencil      | 0.50         |
+
+- CustomerName → CustomerAddress
+  - This is a transitive dependency. The CustomerAddress depends on CustomerName, not directly on OrderID.
+- ProductName → ProductPrice
+  - Another transitive dependency. The price is a property of the product, not the order.
+- Redundancy:
+  - Alice Smith and her address are repeated in two rows.
+  - If the address changes, you have to update it in multiple places (update anomaly).
+  - Similarly, if ProductPrice changes, you’d have to find and update every instance.
+
 
 ---
 transition: slide-left
