@@ -258,6 +258,43 @@ GROUP BY Age;
 transition: slide-left
 ---
 
+# Table Constraints
+
+```sql
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100) NOT NULL UNIQUE,
+    Duration INT CHECK (Duration > 0)
+);
+```
+
+1. Create a table Products with a price that must be greater than 0.
+2. Add a UNIQUE constraint to the Email column of a Customers table.
+
+---
+transition: slide-left
+---
+
+# Altering Tables
+
+```sql
+-- Add a new column
+ALTER TABLE Students ADD COLUMN Email VARCHAR(100);
+
+-- Modify column data type
+ALTER TABLE Students MODIFY COLUMN Age TINYINT;
+
+-- Drop a column
+ALTER TABLE Students DROP COLUMN Email;
+```
+
+1. Add a PhoneNumber column to the Employees table.
+2. Change the data type of Salary in Employees from INT to DECIMAL.
+
+---
+transition: slide-left
+---
+
 # Exercise
 
 - Create a mini database for a Library with:
