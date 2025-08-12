@@ -235,6 +235,41 @@ JOIN Courses ON Enrollments.CourseID = Courses.CourseID;
 1. Create a table Projects and EmployeeProjects (mapping employees to projects). Use a JOIN to list employee names and their project names.
 2. Write a query to list students who are not enrolled in any courses (LEFT JOIN + WHERE NULL).
 
+---
+transition: slide-left
+---
+
+# Aggregation Functions and Grouping
+Use COUNT(), SUM(), AVG(), GROUP BY
+
+```sql
+-- Count students by age
+SELECT Age, COUNT(*) AS Total
+FROM Students
+GROUP BY Age;
+```
+
+## Exercises
+1. Show total number of employees in each department.
+2. Find the average salary of employees per department.
+3. Try using either COUNT, SUM, AVG, or GROUP BY on your custom table
+
+---
+transition: slide-left
+---
+
+# Exercise
+
+- Create a mini database for a Library with:
+  - Books table
+  - Patrons table
+  - Checkout table (who borrowed which book and when)
+
+## Then Try: 
+- Inserting sample data
+- Writing queries using SELECT, JOIN, WHERE, and GROUP BY
+- Performing updates and deletions
+
 
 ---
 transition: slide-left
