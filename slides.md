@@ -204,6 +204,18 @@ class: text-left
 - 🧪 [Enter anonymous lab questions](https://docs.google.com/forms/d/e/1FAIpQLSevvGARdHQikso-uLqFCO481MABKE5HofuSrlzEPMNQ2ZLykw/viewform?usp=dialog)
 - ℹ️ [Course feedback survey](https://circuitstream.typeform.com/to/ZoyYk7px#course_id=SoftwareAN&instructor=9514)
 
+---
+transition: slide-left
+---
+
+# 3rd Normal Form
+
+- Normalization is the process of organizing data in a database to:
+  - Eliminate redundancy
+  - Ensure data dependencies make sense
+  - Improve data integrity
+- Normalization is done in stages called normal forms.
+- ChatGPT: show an example of 3rd normal form
 
 ---
 transition: slide-left
