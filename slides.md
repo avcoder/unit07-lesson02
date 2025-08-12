@@ -48,6 +48,44 @@ transition: slide-left
 transition: slide-left
 ---
 
+# Create a Database
+
+```sql
+-- Create a database
+CREATE DATABASE SchoolDB;
+
+-- Show existing databases
+SHOW DATABASES;
+
+-- Use a specific database
+USE SchoolDB;
+```
+
+
+## Exercises
+1. Create a database called CompanyDB.
+2. Show all databases and switch to CompanyDB.
+
+---
+transition: slide-left
+---
+
+# Creating Tables
+
+```sql
+CREATE TABLE Students (
+    StudentID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Age INT,
+    EnrollmentDate DATE
+);
+```
+
+## Exercises
+1. Create a table called Employees with columns: EmployeeID, Name, Position, Salary, HireDate.
+2. Create a table called Departments with columns: DepartmentID, DeptName, and Location.
+
 ---
 layout: image-right
 transition: slide-left
