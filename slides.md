@@ -163,6 +163,26 @@ DELETE FROM Students WHERE StudentID = 1;
 3. Delete data from your custom table
 
 ---
+transition: slide-left
+---
+
+# Filtering and Sorting
+
+```sql
+-- Get top 3 students older than 18, sorted by age ascending
+SELECT * FROM Students
+WHERE Age > 18
+ORDER BY Age ASC
+LIMIT 3;
+```
+
+## Exercises
+1. List the top 5 highest-paid employees with salary greater than 40000, sorted from highest to lowest salary.
+2. Show departments located in 'New York' and order them alphabetically by department name.
+3. Filter/Sort data from your custom table
+
+
+---
 layout: image-right
 transition: slide-left
 image: /assets/db.jpg
@@ -183,6 +203,37 @@ class: text-left
 
 - 🧪 [Enter anonymous lab questions](https://docs.google.com/forms/d/e/1FAIpQLSevvGARdHQikso-uLqFCO481MABKE5HofuSrlzEPMNQ2ZLykw/viewform?usp=dialog)
 - ℹ️ [Course feedback survey](https://circuitstream.typeform.com/to/ZoyYk7px#course_id=SoftwareAN&instructor=9514)
+
+
+---
+transition: slide-left
+---
+
+# Using Joins
+
+```sql
+CREATE TABLE Courses (
+    CourseID INT AUTO_INCREMENT PRIMARY KEY,
+    CourseName VARCHAR(100)
+);
+
+CREATE TABLE Enrollments (
+    StudentID INT,
+    CourseID INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
+    FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
+);
+
+-- INNER JOIN
+SELECT Students.FirstName, Courses.CourseName
+FROM Enrollments
+JOIN Students ON Enrollments.StudentID = Students.StudentID
+JOIN Courses ON Enrollments.CourseID = Courses.CourseID;
+```
+
+## Exercises
+1. Create a table Projects and EmployeeProjects (mapping employees to projects). Use a JOIN to list employee names and their project names.
+2. Write a query to list students who are not enrolled in any courses (LEFT JOIN + WHERE NULL).
 
 
 ---
