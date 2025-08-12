@@ -242,6 +242,20 @@ transition: slide-left
 transition: slide-left
 ---
 
+# Example Solution
+
+| Problem Before                       | After 3NF Fix               |
+| ------------------------------------ | --------------------------- |
+| Repeated customer info               | Stored once in `Customers`  |
+| Product prices stored multiple times | Stored once in `Products`   |
+| Risk of inconsistent updates         | Changes update only one row |
+| Transitive dependencies              | All removed                 |
+
+
+---
+transition: slide-left
+---
+
 # Using Joins
 
 ```sql
